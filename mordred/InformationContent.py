@@ -50,7 +50,7 @@ class BFSTree(object):
         for src, dst in list(tree.items()):
             self.visited.add(src)
 
-            if dst is ():
+            if not dst:
                 tree[src] = {
                     n.GetIdx(): ()
                     for n in self.atoms[src][2]
