@@ -8,7 +8,7 @@ def main(out):
     ws = wb.active
     ws.title = "descriptors"
 
-    ws.append(["index", "module", "name", "constructor", "dimention", "description"])
+    ws.append(["index", "module", "name", "constructor", "dimension", "description"])
     for cell in ws["1:1"]:
         cell.font = Font(bold=True)
 
@@ -23,7 +23,7 @@ def main(out):
                 info.module.split(".")[-1] if first else None,
                 str(info.raw),
                 "{}({})".format(info.constructor, ", ".join(info.parameters)),
-                info.dimention,
+                info.dimension,
                 info.description,
             ])
             first = False
