@@ -89,7 +89,7 @@ class BCUT(BCUTBase):
     def description(self):
         return "{} {} eigenvalue of Burden matrix weighted by {}".format(
             to_ordinal(np.abs(self._nth) if self._nth < 0 else 1 + self._nth),
-            "lowest" if self._nth < 0 else "heighest",
+            "lowest" if self._nth < 0 else "highest",
             self._prop.get_long(),
         )
 

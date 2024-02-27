@@ -84,7 +84,7 @@ class Missing3DCoordinate(MordredException):
 
 
 class DuplicatedDescriptorName(MordredException):
-    """duplicated string replisantation of descriptor."""
+    """duplicated string representation of descriptor."""
 
     __slots__ = ()
 

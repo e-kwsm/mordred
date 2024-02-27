@@ -107,7 +107,7 @@ class SpDiam(MatrixAttributeBase):
 
     @classmethod
     def description(cls):
-        return "spectral diamiter"
+        return "spectral diameter"
 
     def dependencies(self):
         return {"SpMax": SpMax(*self._key_args), "eig": Eigen(self.matrix)}

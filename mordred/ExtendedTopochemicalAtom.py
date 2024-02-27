@@ -88,7 +88,7 @@ class AlterMolecule(Descriptor):
 
         new = Chem.Mol(new)
         if Chem.SanitizeMol(new, catchErrors=True) != 0:
-            typ = "saturated" if self._saturated else "referense"
+            typ = "saturated" if self._saturated else "reference"
             self.fail(ValueError("cannot sanitize {} mol".format(typ)))
 
         if self.explicit_hydrogens:
@@ -116,7 +116,7 @@ class EtaCoreCount(EtaBase):
 
         \alpha = \sum_{i = 1}^A \frac{Z_i - Z_i^v}{Z_i^v} \cdot \frac{1}{PN_i - 1}
 
-    where :math:`Z_i` and :math:`Z_i^v` are number of total and valence electons,
+    where :math:`Z_i` and :math:`Z_i^v` are number of total and valence electrons,
     :math:`PN` is periodic number.
 
     :type averaged: bool
