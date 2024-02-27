@@ -1,4 +1,7 @@
-from collections import Iterator
+try:
+    from collections import Iterator
+except ImportError:
+    from collections.abc import Iterator
 
 from mordred import (
     Calculator,
