@@ -133,7 +133,7 @@ class SpAD(MatrixAttributeBase):
 
     @classmethod
     def description(cls):
-        return "spectral absolute diviation"
+        return "spectral absolute deviation"
 
     def dependencies(self):
         return {"SpMean": SpMean(*self._key_args), "eig": Eigen(self.matrix)}
@@ -148,7 +148,7 @@ class SpMAD(MatrixAttributeBase):
 
     @classmethod
     def description(cls):
-        return "spectral mean absolute diviation"
+        return "spectral mean absolute deviation"
 
     def dependencies(self):
         return {"SpAD": SpAD(*self._key_args)}
