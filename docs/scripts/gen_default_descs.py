@@ -39,7 +39,7 @@ class DescriptorInfo(object):
         return [Descriptor._pretty(p) for p in self.raw.parameters()]
 
     @property
-    def dimension(self):
+    def dimention(self):
         return "3D" if self.raw.require_3D else "2D"
 
     @property
@@ -52,7 +52,7 @@ class DescriptorInfo(object):
         cnst = ":py:class:`~{}.{}` ({})".format(
             self.module, self.constructor, ", ".join(self.parameters))
         info = self.description
-        dim = self.dimension
+        dim = self.dimention
 
         return '{}, {}, "{}", {}, "{}"'.format(mdl, desc, cnst, dim, info)
 
