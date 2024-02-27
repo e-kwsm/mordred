@@ -4,7 +4,7 @@ import sys
 
 from setuptools import setup, find_packages
 
-install_requires = ["six==1.*", "numpy==1.*", "networkx==2.*"]
+install_requires = ["six==1.*", "numpy==1.*", "networkx<2.2.0", "rdkit"]
 
 if sys.version_info < (3, 4, 0):
     install_requires.append("enum34")
@@ -45,7 +45,6 @@ setup(
         "mordred.tests": list(get_test_data()),
     },
     install_requires=install_requires,
-    tests_require=["nose==1.*", "PyYaml>=4.2b1"],
-    extras_require={"full": ["pandas", "tqdm"]},
+    extras_require={"test": ["pynose", "pandas", "pyyaml>=4.2b1"], "full": ["pandas", "tqdm"]},
     cmdclass={"test": None},
 )
